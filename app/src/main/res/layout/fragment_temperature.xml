@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <EditText
+            android:id="@+id/temperatureInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Temperature Input (f)"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+
+        <Button
+            android:id="@+id/temperatureSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit" />
+
+        <Button
+            android:id="@+id/viewSavedTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous Temperatures" />
+
+        <!--<TextView
+            android:id="@+id/temperatureOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/data_submitted"
+            android:textColorHint="#f00" />-->
+
+
+    </LinearLayout>
+</RelativeLayout>

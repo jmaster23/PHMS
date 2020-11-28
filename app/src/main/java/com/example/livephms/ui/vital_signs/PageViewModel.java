@@ -1,4 +1,4 @@
-package com.example.livephms.ui.main.ui.main;
+package com.example.livephms.ui.vital_signs;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

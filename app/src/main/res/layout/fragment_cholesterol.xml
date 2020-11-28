@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/inputCholesterol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cholesterol"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <EditText
+            android:id="@+id/totalCholesterolInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Cholesterol Input (mg/dl)"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+        <EditText
+            android:id="@+id/hdlCholesterolInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="HDL (mg/dl)"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+        <EditText
+            android:id="@+id/ldlCholesterolInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="mg/dl"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+
+        <EditText
+            android:id="@+id/triglyceridesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Triglycerides (mg/dl)"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+        <RadioGroup
+            android:id="@+id/radioGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/cholesterolSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit" />
+
+        <Button
+            android:id="@+id/viewSavedCholesterol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous Cholesterols" />
+
+        <!--<TextView
+            android:id="@+id/cholesterolOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/data_submitted"
+            android:textColorHint="#f00" />-->
+
+
+    </LinearLayout>
+</RelativeLayout>

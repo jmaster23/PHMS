@@ -10,6 +10,20 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_vital_signs">VitalSigns</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Blood Pressure</string>
+    <string name="tab_text_2">Cholesterol</string>
+    <string name="tab_text_3">Glucose Level</string>
+    <string name="tab_text_4">Heart Rate</string>
+    <string name="tab_text_5">Temperature</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="enter_blood_pressure">Enter Blood Pressure</string>
+    <string name="input_blood_pressure">Input Blood Pressure</string>
+    <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+    <string name="submit">Submit</string>
+    <string name="date_measured">Date measured</string>
+    <string name="temperature">Temperature</string>
+    <string name="temperature_input_f">Temperature Input (f)</string>
+    <string name="submitTemp">submitTemp</string>
+    <string name="data_submitted">Data Submitted</string>
 </resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/inputBloodPressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <EditText
+            android:id="@+id/systolicInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Systolic"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+        <EditText
+            android:id="@+id/diastolicInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Diastolic"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+
+        <EditText
+            android:id="@+id/dateMeasured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Date Measured"
+            android:inputType="date"
+            android:textColorHint="#f00" />
+
+        <Button
+            android:id="@+id/bloodPressureSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit" />
+
+        <Button
+            android:id="@+id/viewSavedBloodPressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous Blood Pressures" />
+
+        <!--<TextView
+            android:id="@+id/bloodPressureOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="#f00" />-->
+
+    </LinearLayout>
+</RelativeLayout>
