@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.livephms.MoniteringSystemAndAlerts;
 import com.example.livephms.R;
 
 import androidx.annotation.NonNull;
@@ -91,6 +93,8 @@ public class BloodPressure extends Fragment {
         }
         else {
             checkSafeLevels.setText("Hypertensive Crisis! Seek Emergency Care!");
+            MoniteringSystemAndAlerts MSA = new MoniteringSystemAndAlerts();
+            MSA.bloodPressureAlert();
         }
     }
 

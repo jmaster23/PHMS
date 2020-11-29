@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.livephms.MoniteringSystemAndAlerts;
 import com.example.livephms.R;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -73,6 +75,8 @@ public class GlucoseLevel extends Fragment {
         }
         else {
             glucoseSafeLevels.setText("Diabetic ");
+            MoniteringSystemAndAlerts MSA = new MoniteringSystemAndAlerts();
+            MSA.glucoseAlert();
         }
     }
 
