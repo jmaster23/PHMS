@@ -56,25 +56,6 @@
             android:inputType="number"
             android:textColorHint="#f00" />
 
-        <RadioGroup
-            android:id="@+id/radioGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/radioMale"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="Male" />
-
-            <RadioButton
-                android:id="@+id/radioFemale"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Female" />
-
-        </RadioGroup>
 
         <Button
             android:id="@+id/cholesterolSubmit"
@@ -88,13 +69,26 @@
             android:layout_height="wrap_content"
             android:text="Previous Cholesterols" />
 
-        <!--<TextView
-            android:id="@+id/cholesterolOutput"
+        <TextView
+            android:id="@+id/cholesterolSafeLevels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/data_submitted"
-            android:textColorHint="#f00" />-->
+            android:textColor="#f00"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/HDLSafeLevels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#f00"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/LDLSafeLevels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#f00"
+            android:textSize="18sp" />
 
 
     </LinearLayout>

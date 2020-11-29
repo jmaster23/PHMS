@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.example.livephms.R;
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class GlucoseLevel extends Fragment {
 
 
     private EditText glucoseInput;
+    private TextView glucoseSafeLevels;
     private Button glucoseSubmit, viewSavedGlucoseLevel;
 
     private String loadGlucose;
@@ -35,6 +37,7 @@ public class GlucoseLevel extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //final TextView glucoseOutput = (TextView) getActivity().findViewById(R.id.glucoseOutput);
         glucoseInput = (EditText) getActivity().findViewById(R.id.glucoseInput);
+        glucoseSafeLevels = (TextView) getActivity().findViewById(R.id.glucoseSafeLevels);
         glucoseSubmit = (Button) getActivity().findViewById(R.id.glucoseSubmit);
         viewSavedGlucoseLevel = (Button) getActivity().findViewById(R.id.viewSavedGlucoseLevel);
 
@@ -42,6 +45,7 @@ public class GlucoseLevel extends Fragment {
             @Override
             public void onClick(View v) {
                 glucoseInput.setText(glucoseInput.getText().toString());
+                glucoseSafeLevels();
                 saveGlucoseData();
             }
         });
@@ -56,6 +60,20 @@ public class GlucoseLevel extends Fragment {
         loadGlucoseData();
         updateGlucoseData();
 
+    }
+
+    private void glucoseSafeLevels(){
+        int glucose = (Integer.valueOf(glucoseInput.getText().toString()));
+
+        if(glucose <= 200) {
+            glucoseSafeLevels.setText("Normal Glucose ");
+        }
+        else if(glucose >= 190 && glucose <= 230){
+            glucoseSafeLevels.setText("Impaired Glucose");
+        }
+        else {
+            glucoseSafeLevels.setText("Diabetic ");
+        }
     }
 
     private void saveGlucoseData(){

@@ -58,12 +58,12 @@
             android:layout_height="wrap_content"
             android:text="Previous Blood Pressures" />
 
-        <!--<TextView
-            android:id="@+id/bloodPressureOutput"
+        <TextView
+            android:id="@+id/checkSafeLevels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColorHint="#f00" />-->
+            android:textColor="#f00"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </RelativeLayout>

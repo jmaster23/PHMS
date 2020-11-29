@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.example.livephms.R;
 
@@ -25,11 +26,9 @@ public class BloodPressure extends Fragment {
     private EditText systolicInput;
     private EditText diastolicInput;
     private EditText dateMeasured;
+    private TextView checkSafeLevels;
     private Button bloodPressureSubmit, viewSavedBloodPressure;
 
-    //String systolic = systolicInput.getText().toString();
-    //String diastolic = diastolicInput.getText().toString();
-    //String date = dateMeasured.getText().toString();
 
    private String loadSystolic, loadDiastolic, loadDate;
 
@@ -45,7 +44,10 @@ public class BloodPressure extends Fragment {
         systolicInput = (EditText) getActivity().findViewById(R.id.systolicInput);
         diastolicInput = (EditText) getActivity().findViewById(R.id.diastolicInput);
         dateMeasured = (EditText) getActivity().findViewById(R.id.dateMeasured);
+        checkSafeLevels = (TextView) getActivity().findViewById(R.id.checkSafeLevels);
+
         bloodPressureSubmit = (Button) getActivity().findViewById(R.id.bloodPressureSubmit);
+        viewSavedBloodPressure = (Button) getActivity().findViewById(R.id.viewSavedBloodPressure);
         viewSavedBloodPressure = (Button) getActivity().findViewById(R.id.viewSavedBloodPressure);
 
         bloodPressureSubmit.setOnClickListener(new View.OnClickListener() {
@@ -54,13 +56,9 @@ public class BloodPressure extends Fragment {
                 systolicInput.setText(systolicInput.getText().toString());
                 diastolicInput.setText(diastolicInput.getText().toString());
                 dateMeasured.setText(dateMeasured.getText().toString());
+                checkSafeLevels();
                 saveBloodPressureData();
-                //bloodPressureOutput.setBackgroundColor(Color.BLACK);
-               //bloodPressureOutput.setTextColor(Color.WHITE);
-                //bloodPressureOutput.setTextSize(20);
-                //bloodPressureOutput.setText("Systolic: " + systolic +"\n"+ "Diastolic: " + diastolic +"\n"+ "Date measured: " + date);
-                //checkSystolicSafeLevels(v);
-                //checkDiastolicSafeLevels(v);
+
             }
         });
         viewSavedBloodPressure.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +72,26 @@ public class BloodPressure extends Fragment {
         loadBloodPressureData();
         updateBloodPressureData();
 
+    }
+
+    private void checkSafeLevels(){
+        int sys = (Integer.valueOf(systolicInput.getText().toString()));
+        int dias = (Integer.valueOf(diastolicInput.getText().toString()));
+        if(sys < 120 && dias < 80) {
+            checkSafeLevels.setText("Normal Blood Pressure ");
+        }
+        else if(sys >= 120 && sys <= 129 && dias < 80){
+            checkSafeLevels.setText("Elevated ");
+        }
+        else if(sys >= 130 && sys <= 139 || dias >= 80 && dias <= 89){
+            checkSafeLevels.setText("Hypertension (Stage 1)");
+        }
+        else if(sys >= 140 && sys <= 179 || dias >= 90 && dias < 120){
+            checkSafeLevels.setText("Hypertension (Stage 2)");
+        }
+        else {
+            checkSafeLevels.setText("Hypertensive Crisis! Seek Emergency Care!");
+        }
     }
 
     private void saveBloodPressureData(){

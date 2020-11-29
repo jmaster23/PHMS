@@ -39,13 +39,12 @@
             android:layout_height="wrap_content"
             android:text="Previous Glucose Level" />
 
-        <!--<TextView
-            android:id="@+id/glucoseOutput"
+        <TextView
+            android:id="@+id/glucoseSafeLevels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/data_submitted"
-            android:textColorHint="#f00" />
--->
+            android:textColor="#f00"
+            android:textSize="18sp" />
+
     </LinearLayout>
 </RelativeLayout>
