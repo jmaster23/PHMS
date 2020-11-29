@@ -4,8 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-//import androidx.loader.content.AsyncTaskLoader;
-import android.support.v4.content.AsyncTaskLoader;
+import androidx.loader.content.AsyncTaskLoader;
 
 public class MoniteringSystemAndAlerts extends AsyncTaskLoader<String> {
     private String mQueryString;
@@ -24,6 +23,7 @@ public class MoniteringSystemAndAlerts extends AsyncTaskLoader<String> {
     @Nullable
     @Override
     public String loadInBackground() {
-        return NetworkUtils.getBookInfo(mQueryString);
+        //return NetworkUtils.getBookInfo(mQueryString);
+        return mQueryString;
     }
 }
