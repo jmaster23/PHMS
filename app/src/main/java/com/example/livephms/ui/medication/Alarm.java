@@ -2,7 +2,9 @@ package com.example.livephms.ui.medication;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -17,7 +19,8 @@ import java.util.Calendar;
 
 
 public class Alarm extends AppCompatActivity implements View.OnClickListener {
-
+    public static final String PREFS_Alarm = "sharedAlarmPrefs";
+    public static final String ID = "alarmID";
     private int notificationId = 1;
 
     @Override
@@ -41,9 +44,16 @@ public class Alarm extends AppCompatActivity implements View.OnClickListener {
         intent.putExtra("notificationId", notificationId);
         intent.putExtra("message", medName.getText().toString());
 
+        final int id = (int)System.currentTimeMillis();
+
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFS_Alarm, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(ID, String.valueOf(id));
+        editor.apply();
+
         // PendingIntent
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                com.example.livephms.ui.medication.Alarm.this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+                com.example.livephms.ui.medication.Alarm.this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         // AlarmManager
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);

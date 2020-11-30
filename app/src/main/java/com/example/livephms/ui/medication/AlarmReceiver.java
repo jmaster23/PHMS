@@ -6,12 +6,14 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
 public class AlarmReceiver extends BroadcastReceiver {
-
+    public static final String PREFS_Alarm = "sharedAlarmPrefs";
+    public static final String ID = "alarmID";
     private static final String CHANNEL_ID = "CHANNEL_SAMPLE";
 
     @Override
@@ -23,7 +25,10 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         // Call MainActivity when notification is tapped.
         Intent mainIntent = new Intent(context, Alarm.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, mainIntent, 0);
+
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS_Alarm, Context.MODE_PRIVATE);
+        int id = Integer.parseInt(sharedPreferences.getString(ID, ""));
+        PendingIntent contentIntent = PendingIntent.getActivity(context, id, mainIntent, 0);
 
         // NotificationManager
         NotificationManager notificationManager =
