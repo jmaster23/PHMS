@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "22510151979",
+    "firebase_url": "https://registration-and-login-fcc13.firebaseio.com",
+    "project_id": "registration-and-login-fcc13",
+    "storage_bucket": "registration-and-login-fcc13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22510151979:android:eeabea8c5eb56bf61b3d6e",
+        "android_client_info": {
+          "package_name": "com.example.loginandregistration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22510151979-hftk6jv37pls636bs097etl8d7hvmnnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMtQAGoHFnFt1x7AlLNYIb2UfqCqQxRd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22510151979-hftk6jv37pls636bs097etl8d7hvmnnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LoginandRegistration</string>
+    <string name="selected_item">Selected item:</string>
+    <string-array name="Security_Questions">
+        <item>Who is your best friend?</item>
+        <item>What city were you born in?</item>
+        <item>What was your first car?</item>
+        <item>Where was your first date?</item>
+        <item>What city were you born</item>
+        <item>Where did your parents meet?</item>
+    </string-array>
+</resources>
