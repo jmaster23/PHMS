@@ -4,46 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.Notification;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.telephony.SmsManager;
 import android.widget.Toast;
 import java.util.ArrayList;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Build;
+
+import com.example.livephms.ui.medication.Alarm;
 
 public class Communication extends AppCompatActivity {
-    public void pushNotification(String message) {
-        /*// Prepare Notification
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(android.R.drawable.ic_dialog_info)
-                .setContentTitle("TITLE")
-                .setContentText(message)
-                .setContentIntent(contentIntent)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true);
+    public void pushNotification() {
+        String title = "Time to take your " + R.id.dosage + " of " + R.id.medicationName + ".";
+        String body = "Time to take your " + R.id.dosage + " of " + R.id.medicationName + ".\nLook for a " + R.id.medicationColor + " " + R.id.dosageType + ".";
+        NotificationManager notif=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        Notification notify=new Notification.Builder
+                (getApplicationContext()).setContentText(body).setContentTitle(title).setSmallIcon(android.R.drawable.ic_dialog_info).build();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            // For API 26 and above
-            CharSequence channelName = "My Notification";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, channelName, importance);
-            notificationManager.createNotificationChannel(channel);
-        }
-
-        // NotificationManager
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-
-        // Notify
-        notificationManager.notify(notificationId, builder.build());*/
+        notify.flags |= Notification.FLAG_AUTO_CANCEL;
+        notif.notify(0, notify);
     }
 
     public void textSMS(String message) {

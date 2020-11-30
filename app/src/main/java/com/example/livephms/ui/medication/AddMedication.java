@@ -20,17 +20,19 @@ import com.example.livephms.R;
 public class AddMedication extends Fragment {
     public static final String PREFS_Medication = "sharedMedicationPrefs";
     public static final String NAME_INPUT = "medicationName";
+    public static final String COLOR_INPUT = "medicationColor";
     public static final String DOSAGE_INPUT = "dosage";
     public static final String DOSAGE_TYPE_INPUT = "dosageType";
     public static final String FREQUENCY = "frequency";
 
     private EditText medicationName;
+    private EditText medicationColor;
     private EditText dosage;
     private EditText dosageType;
     private EditText frequency;
     private Button medicationSubmit, viewSavedMedication, addAlarm, viewSavedAlarms;
 
-    private String loadMedicationName, loadDosage, loadDosageType, loadFrequency, loadAlarm;
+    private String loadMedicationName, loadMedicationColor, loadDosage, loadDosageType, loadFrequency, loadAlarm;
 
     @Nullable
     @Override
@@ -42,6 +44,7 @@ public class AddMedication extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         medicationName = (EditText) getActivity().findViewById(R.id.medicationName);
+        medicationColor = (EditText) getActivity().findViewById(R.id.medicationColor);
         dosage = (EditText) getActivity().findViewById(R.id.dosage);
         dosageType = (EditText) getActivity().findViewById(R.id.dosageType);
         frequency = (EditText) getActivity().findViewById(R.id.frequency);
@@ -54,6 +57,7 @@ public class AddMedication extends Fragment {
             @Override
             public void onClick(View v) {
                 medicationName.setText(medicationName.getText().toString());
+                medicationColor.setText(medicationColor.getText().toString());
                 dosage.setText(dosage.getText().toString());
                 dosageType.setText(dosageType.getText().toString());
                 frequency.setText(frequency.getText().toString());
@@ -96,6 +100,7 @@ public class AddMedication extends Fragment {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putString(NAME_INPUT, medicationName.getText().toString());
+        editor.putString(COLOR_INPUT, medicationColor.getText().toString());
         editor.putString(DOSAGE_INPUT, dosage.getText().toString());
         editor.putString(DOSAGE_TYPE_INPUT, dosageType.getText().toString());
         editor.putString(FREQUENCY, frequency.getText().toString());
@@ -107,6 +112,7 @@ public class AddMedication extends Fragment {
     public void loadMedicationData(){
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(PREFS_Medication, Context.MODE_MULTI_PROCESS);
         loadMedicationName = sharedPreferences.getString(NAME_INPUT, "");
+        loadMedicationColor = sharedPreferences.getString(COLOR_INPUT, "");
         loadDosage = sharedPreferences.getString(DOSAGE_INPUT, "");
         loadDosageType = sharedPreferences.getString(DOSAGE_TYPE_INPUT, "");
         loadFrequency = sharedPreferences.getString(FREQUENCY, "");
@@ -114,6 +120,7 @@ public class AddMedication extends Fragment {
 
     public void updateMedicationData(){
         medicationName.setText(loadMedicationName);
+        medicationColor.setText(loadMedicationColor);
         dosage.setText(loadDosage);
         dosageType.setText(loadDosageType);
         frequency.setText(loadFrequency);

@@ -22,6 +22,7 @@ public class SavedMedication extends AppCompatActivity {
         SharedPreferences medicationPrefs = getApplicationContext().getSharedPreferences("sharedMedicationPrefs", Context.MODE_PRIVATE);
         //medicationPrefs.edit().clear().commit();
         String medicationName = medicationPrefs.getString("medicationName", "");
+        String medicationColor = medicationPrefs.getString("medicationColor", "");
         String dosage = medicationPrefs.getString("dosage", "");
         String dosageType = medicationPrefs.getString("dosageType", "");
         String frequency = medicationPrefs.getString("frequency", "");

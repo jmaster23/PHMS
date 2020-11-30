@@ -28,6 +28,15 @@
             android:textColorHint="#f00" />
 
         <EditText
+            android:id="@+id/medicationColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Medication Color"
+            android:inputType="text"
+            android:textColorHint="#f00" />
+
+        <EditText
             android:id="@+id/dosage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Dosage Type"
+            android:hint="Pill/Capsule/Liquid"
             android:inputType="text"
             android:textColorHint="#f00" />
 
