@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/medicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medication"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <EditText
+            android:id="@+id/medicationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Medication Name"
+            android:inputType="text"
+            android:textColorHint="#f00" />
+
+        <EditText
+            android:id="@+id/dosage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Dosage"
+            android:inputType="number"
+            android:textColorHint="#f00" />
+
+        <EditText
+            android:id="@+id/dosageType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Dosage Type"
+            android:inputType="text"
+            android:textColorHint="#f00" />
+
+
+        <EditText
+            android:id="@+id/frequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Frequency"
+            android:inputType="text"
+            android:textColorHint="#f00" />
+
+        <Button
+            android:id="@+id/medicationSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit" />
+
+        <Button
+            android:id="@+id/addAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add alarm" />
+
+        <Button
+            android:id="@+id/viewSavedMedication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous Medications" />
+
+        <Button
+            android:id="@+id/viewSavedAlarms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saved Alarms" />
+
+
+
+    </LinearLayout>
+</RelativeLayout>

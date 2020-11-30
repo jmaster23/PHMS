@@ -9,6 +9,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <!-- Strings related to Vital Signs -->
     <string name="title_activity_vital_signs">VitalSigns</string>
     <string name="tab_text_1">Blood Pressure</string>
     <string name="tab_text_2">Cholesterol</string>
@@ -26,4 +27,6 @@
     <string name="temperature_input_f">Temperature Input (f)</string>
     <string name="submitTemp">submitTemp</string>
     <string name="data_submitted">Data Submitted</string>
+    <!-- Strings related to Medication -->
+    <string name="tab_text_6">Medication</string>
 </resources>

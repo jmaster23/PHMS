@@ -1,4 +1,4 @@
-package com.example.livephms.ui.vital_signs;
+package com.example.livephms.ui.medication;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,15 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.livephms.R;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+
 public class PlaceholderFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private com.example.livephms.ui.vital_signs.PageViewModel pageViewModel;
+    private com.example.livephms.ui.medication.PageViewModel pageViewModel;
 
-    public static com.example.livephms.ui.vital_signs.PlaceholderFragment newInstance(int index) {
-        com.example.livephms.ui.vital_signs.PlaceholderFragment fragment = new com.example.livephms.ui.vital_signs.PlaceholderFragment();
+    public static com.example.livephms.ui.medication.PlaceholderFragment newInstance(int index) {
+        com.example.livephms.ui.medication.PlaceholderFragment fragment = new com.example.livephms.ui.medication.PlaceholderFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);
         fragment.setArguments(bundle);
@@ -34,7 +32,7 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModel = new ViewModelProvider(this).get(com.example.livephms.ui.vital_signs.PageViewModel.class);
+        pageViewModel = new ViewModelProvider(this).get(com.example.livephms.ui.medication.PageViewModel.class);
         int index = 1;
         if (getArguments() != null) {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
@@ -46,7 +44,7 @@ public class PlaceholderFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_main_vitalsigns, container, false);
+        View root = inflater.inflate(R.layout.fragment_main_medication, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
         pageViewModel.getText().observe(this, new Observer<String>() {
             @Override
