@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 import com.example.livephms.R;
 import com.example.livephms.ui.login.LoginViewModel;
 import com.example.livephms.ui.login.LoginViewModelFactory;
+import com.example.livephms.ui.medication.medicationMainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -74,7 +76,9 @@ public class LoginActivity extends AppCompatActivity {
                 setResult(Activity.RESULT_OK);
 
                 //Complete and destroy login activity once successful
-                finish();
+                //finish();
+                Intent launch = new Intent(LoginActivity.this, medicationMainActivity.class);
+                startActivity(launch);
             }
         });
 

@@ -23,6 +23,7 @@ public class MoniteringSystemAndAlerts {
         String defaultMsg = "Time to take your " + R.id.dosage + " of " + R.id.medicationName + ".\nLook for a " + R.id.medicationColor + " " + R.id.dosageType + ".";
         Communication com = new Communication();
         com.textSMS(defaultMsg);
+        com.medicationConsumptionNotification();
     }
 
     public void medConflictAlert() {

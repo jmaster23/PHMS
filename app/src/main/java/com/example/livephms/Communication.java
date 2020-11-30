@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import com.example.livephms.ui.medication.Alarm;
 
 public class Communication extends AppCompatActivity {
-    public void pushNotification() {
+    public void medicationConsumptionNotification() {
         String title = "Time to take your " + R.id.dosage + " of " + R.id.medicationName + ".";
         String body = "Time to take your " + R.id.dosage + " of " + R.id.medicationName + ".\nLook for a " + R.id.medicationColor + " " + R.id.dosageType + ".";
         NotificationManager notif=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
