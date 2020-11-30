@@ -11,8 +11,6 @@ import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
-import com.example.livephms.MoniteringSystemAndAlerts;
-
 public class AlarmReceiver extends BroadcastReceiver {
     public static final String PREFS_Alarm = "sharedAlarmPrefs";
     public static final String ID = "alarmID";
@@ -56,8 +54,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         // Notify
         notificationManager.notify(notificationId, builder.build());
-        MoniteringSystemAndAlerts MSA = new MoniteringSystemAndAlerts();
-        MSA.medConsumptionAlert();
     }
 }
 
