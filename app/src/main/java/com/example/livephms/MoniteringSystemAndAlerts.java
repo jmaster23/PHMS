@@ -20,19 +20,19 @@ public class MoniteringSystemAndAlerts {
     }
 
     public void medConsumptionAlert() {
-        String defaultMsg = "Time to take your "; //+ R.id.medicineName + ".\nLook for a " + R.id.medicineColor + " " + R.id.medicineType + ".";
+        String defaultMsg = "Time to take your " + R.id.dosage + " of " + R.id.medicationName + ".\nLook for a " + R.id.medicationColor + " " + R.id.dosageType + ".";
         Communication com = new Communication();
         com.textSMS(defaultMsg);
     }
 
     public void medConflictAlert() {
-        String defaultMsg = "Stop all use of "; //+ R.id.medicineName + " immediately!";
+        String defaultMsg = "Stop all use of " + R.id.medicationName + " immediately!";
         Communication com = new Communication();
         com.textSMS(defaultMsg);
     }
 
     public void medRenewalAlert() {
-        String defaultMsg = "Time to renew your "; //+ R.id.medicineName + ".\n";
+        String defaultMsg = "Time to renew your " + R.id.medicationName + ".\n";
         Communication com = new Communication();
         com.textSMS(defaultMsg);
     }
